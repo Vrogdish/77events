@@ -38,6 +38,8 @@ const Slider = () => {
                 <div>{getMonth(new Date(event.date))}</div>
               </div>
             </div>
+
+            
           </div>
           <div className="SlideCard__paginationContainer">
             <div className="SlideCard__pagination">
@@ -47,7 +49,7 @@ const Slider = () => {
                   key={`${event.id}`}
                   type="radio"
                   name="radio-button"
-                  checked={idx === radioIdx}
+                  checked={index === radioIdx}
                 />
               ))}
             </div>
