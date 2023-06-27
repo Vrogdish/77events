@@ -1,3 +1,5 @@
+// modif index (0 -> 11)
+
 export const MONTHS = {
   0: "janvier",
   1: "février",

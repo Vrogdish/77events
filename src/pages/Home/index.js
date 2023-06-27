@@ -13,7 +13,19 @@ import Modal from "../../containers/Modal";
 import { useData } from "../../contexts/DataContext";
 
 const Page = () => {
-  const {last} = useData()
+
+// suppr const {last} = useData()
+
+// ajout
+const {data,error} = useData()
+const dataSortedByDate = data?.events.sort((a,b)=> new Date(b.date) - new Date(a.date)) || []
+
+const last = data ? dataSortedByDate[0]: null
+
+//      //
+
+
+
   return <>
     <header>
       <Menu />
@@ -116,13 +128,20 @@ const Page = () => {
     <footer className="row">
       <div className="col presta">
         <h3>Notre derniére prestation</h3>
+{/* ajout gestion de l error */}
+        {error && <div>An error occured</div>}
+      {last === null ? (
+        "loading"
+      ) : (
         <EventCard
-          imageSrc={last?.cover}
-          title={last?.title}
-          date={new Date(last?.date)}
+        // modif last? -> last
+          imageSrc={last.cover} 
+          title={last.title}
+          date={new Date(last.date)}
           small
           label="boom"
         />
+         )} 
       </div>
       <div className="col contact">
         <h3>Contactez-nous</h3>

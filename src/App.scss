@@ -3,6 +3,8 @@
 
 body {
   font-family: "Space Grotesk", sans-serif;
+  // ajout overflow pour supprimer la scroll bar du bas
+  overflow-x: hidden;
 }
 .App {
   text-align: center;
