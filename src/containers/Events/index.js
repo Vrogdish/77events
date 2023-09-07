@@ -32,20 +32,12 @@ const EventList = () => {
     if (
       (currentPage - 1) * PER_PAGE <= index &&
       PER_PAGE * currentPage > index 
-
-      
       ) {
       return true;
-      
     }
     return false;
-
-    
   });
 
- 
-
- 
   const pageNumber = Math.floor((filteredEvents?.length || 0) / PER_PAGE) + 1;
   const typeList = new Set(data?.events.map((event) => event.type));
 
