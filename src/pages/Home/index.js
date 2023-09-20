@@ -16,7 +16,7 @@ const Page = () => {
 
 // suppr const {last} = useData()
 
-// ajout
+// ajout fonction de tri
 const {data,error} = useData()
 const dataSortedByDate = data?.events.sort((a,b)=> new Date(b.date) - new Date(a.date)) || []
 

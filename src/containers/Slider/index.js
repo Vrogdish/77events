@@ -29,11 +29,9 @@ const Slider = () => {
   return (
     <div className="SlideCardList">
       {byDateDesc?.map((event, idx) => (
-        // modif <> </>
+        // remplacement <> </> par une div pour contenir la key unique
         <div key={event.title}>
           <div 
-          // modif event.title -> event.id
-            // key={event.id}
             className={`SlideCard SlideCard--${
               index === idx ? "display" : "hide"
             }`}
@@ -53,7 +51,7 @@ const Slider = () => {
             <div className="SlideCard__pagination">
               {byDateDesc?.map((_, radioIdx) => (
                 <input
-                  // modif key={`${event.id}`}
+                  // modif key event.id -> _.title
                   key={`${_.title}`}
                   type="radio"
                   name="radio-button"
