@@ -21,8 +21,7 @@ const EventList = () => {
     setType(evtType);
   };
 
-
-  // modif data?.event -> ...filter(...
+  // modif data?.event -> ...filter(...)
   const filteredEvents = (
     (!type
       ? data?.events
